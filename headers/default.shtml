@@ -46,7 +46,7 @@
                                 <li><a href="//copp.asu.edu" target="_top" title="College of Public Programs website">Public Service and Community Solutions</a></li>
                                 <li><a href="//schoolofsustainability.asu.edu" target="_top" title="School of Sustainability website">Sustainability</a></li>
                                 <li><a href="//uc.asu.edu/" target="_top" title="University College website">University College</a></li>
-				                        <li><a target="_top" href="//www.thunderbird.edu/" title="Thunderbird School of Global Management website">New: Thunderbird School of Global Management</a></li>
+				<li><a target="_top" href="//www.thunderbird.edu/" title="Thunderbird School of Global Management website">New: Thunderbird School of Global Management</a></li>
                             </ul>
                         </li>
                         <li class="parent"><a href="//www.asu.edu/map/" target="_top">Map &amp; Locations</a>
@@ -58,7 +58,7 @@
                                 <li><a href="//campus.asu.edu/downtown/" target="_top" title="Downtown Phoenix campus">Downtown Phoenix</a></li>
                                 <li><a href="//asuonline.asu.edu/" target="_top" title="Online and Extended campus">Online and Extended</a></li>
                                 <li><a href="//havasu.asu.edu/" target="_top">Lake Havasu</a></li>
-				                        <li><a class="border" target="_top" href="//www.thunderbird.edu/about-thunderbird/locations/phoenix-arizona">Thunderbird</a></li>
+				<li><a class="border" target="_top" href="//www.thunderbird.edu/about-thunderbird/locations/phoenix-arizona">Thunderbird</a></li>
                                 <li><a href="//skysong.asu.edu/" target="_top">Skysong</a></li>
                                 <li><a href="//asuresearchpark.com/" target="_top">Research Park</a></li>
                                 <li><a href="//washingtoncenter.asu.edu/" target="_top">Washington D.C.</a></li>
@@ -78,7 +78,7 @@
         </div>
     </div>
 </div>
-<script>
+<script type="text/javascript">
 <!--//--><![CDATA[//><!--
 ASUHeader.default_search_text = "Search ASU";
 ASUHeader.default_search_alttext = "Search ASU";
