@@ -105,7 +105,7 @@
     if (typeof ASUHeader.user_signedin == "undefined" || (ASUHeader.user_signedin != false && typeof ASUHeader.user_displayname == "undefined")) {
         ASUHeader.checkSSOCookie();
     }
-    if (ASUHeader.user_signedin == true) {
+    if (ASUHeader.user_signedin == true && !ASUHeader.noSSOLink) {
         ASUHeader.setSSOLink();
     }
     if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
