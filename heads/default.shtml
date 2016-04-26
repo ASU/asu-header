@@ -1,5 +1,5 @@
-<!-- START /asuthemes/4.3/heads/default.shtml -->
-<link type="text/css" rel="stylesheet" media="all" href="//www.asu.edu/asuthemes/4.3/css/asu_header.min.css" />
+<!-- START /asuthemes/4.4/heads/default.shtml -->
+<link type="text/css" rel="stylesheet" media="all" href="//www.asu.edu/asuthemes/4.4/css/asu_header.min.css" />
 <!--[if IE 9]>
 <style type="text/css">
 #asu_universal_nav ul ul{filter:none;box-shadow:0 6px 6px 0 #999}#asu_universal_nav>ul>li.parent:hover>a{filter:none;box-shadow:6px 0 6px -6px #999,-6px 0 6px -6px #999}
@@ -13,5 +13,5 @@ ASUHeader.browser = false;
 <!--[if IE 6]><script>ASUHeader.browser = true;</script><![endif]-->
 <!--[if IE 7]><script>ASUHeader.browser = true;</script><![endif]-->
 <!--[if IE 8]><script>ASUHeader.browser = true;</script><![endif]-->
-<script type="text/javascript" src="//www.asu.edu/asuthemes/4.3/js/asu_header.min.js"></script>
-<!-- END /asuthemes/4.3/heads/default.shtml -->
+<script type="text/javascript" src="//www.asu.edu/asuthemes/4.4/js/asu_header.min.js"></script>
+<!-- END /asuthemes/4.4/heads/default.shtml -->
