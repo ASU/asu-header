@@ -1,4 +1,4 @@
-<!-- START /asuthemes/4.3/headers/default_aspnet.shtml -->
+<!-- START /asuthemes/4.5/headers/default_aspnet.shtml -->
 <div id="main-search" class="main-search closed"></div>
 <div id="asu_hdr" class="asu_hdr_white">
     <div id="asu_mobile_hdr">
@@ -100,5 +100,5 @@
     //--><!]]>
 </script>
 <div style="clear:both;"></div>
-<!-- END /asuthemes/4.3/headers/default_aspnet.shtml -->
+<!-- END /asuthemes/4.5/headers/default_aspnet.shtml -->
 
