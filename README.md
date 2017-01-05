@@ -136,18 +136,18 @@ ASUHeader.site_menu.json =
 
 #### Site title & Parent Organization
 
-The site title can be added to the mobile menu system with the following.
-
-```javascript
-ASUHeader.site_menu.site_name = 'Name of site';
-```
-
-A new feature of the WSHF is the aility to generate a Desktop site title, as well as provide a parent organization to be printed under the ASU Logo at the top of the page. 
+The WSHF can generate a Desktop site title, as well as provide a parent organization to be printed under the ASU Logo at the top of the page. These will also translate to the mobile menu.
 
 Ex.
 
 ```javascript
 ASUHeader.site_title = {title: "Name of Site", parent_org: "Name of Parent Organization"};
+```
+
+_\*Obsolete\*_ The site title can be added specifically to the mobile menu system with the following.
+
+```javascript
+ASUHeader.site_menu.site_name = 'Name of site';
 ```
 
 ### On a Drupal site
