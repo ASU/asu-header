@@ -279,9 +279,20 @@
         a.id = 'asu_universal_nav_new';
         a.innerHTML = '';
         var ul = document.createElement('ul');
+        var site_name_content;
         if (typeof ASUHeader.site_menu !== "undefined" && typeof ASUHeader.site_menu.site_name !== 'undefined') {
-          addLi(ul, 'tlb site_title', '<span>' + ASUHeader.site_menu.site_name + '</span>');
+          console.log('hit');
+          site_name_content = '<span>' + ASUHeader.site_menu.site_name + '</span>';
+        } else if (typeof ASUHeader.site_title !== 'undefined' && typeof ASUHeader.site_title.title !== 'undefined'){
+          if(typeof ASUHeader.site_title.parent_org !== 'undefined'){
+            site_name_content = '<span><span class="asu-parent-org">' + ASUHeader.site_title.parent_org + '</span><span class="asu-site-title">' + ASUHeader.site_title.title + '</span></span>';
+          } else {
+            site_name_content ='<span>' + ASUHeader.site_title.title + '</span>';
+          }
+        } else {
+          site_name_content = '';
         }
+        addLi(ul, 'tlb site_title', site_name_content);
         if (typeof ASUHeader.user_signedin == "undefined" || ASUHeader.user_signedin === false) {
           //signin
           addLi(ul, 'tlb', '<div class="text"><a href="https://weblogin.asu.edu/cgi-bin/login" onclick="this.href=ASUHeader.alterLoginHref(this.href);" onfocus="this.href=ASUHeader.alterLoginHref(this.href);" onmouseover="this.href=ASUHeader.alterLoginHref(this.href);" target="_top">Sign In</a></div><div id="f-user" class="icn f-user"></div>');
