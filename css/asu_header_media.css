@@ -202,13 +202,23 @@
     }
 
     #asu_universal_nav_new .site_title {
-        background-color:#505558!important
+        background-color:#DDD!important;
+        min-height: 0.1em;
     }
 
     #asu_universal_nav_new .site_title>span {
         display:block;
         padding:12px 15px;
-        color:#fff
+        color:#fff;
+        background-color: #505558;
+        line-height: 1em;
+        letter-spacing: -0.5px;
+    }
+
+    #asu_universal_nav_new .site_title>span .asu-parent-org {
+        border-right: 2px solid white;
+        padding-right: 7px;
+        margin-right: 7px;
     }
 
     #asu_universal_nav_new ul li a {
@@ -359,7 +369,7 @@
       color: #FFF;
       background: #505558;
       font-weight: 600;
-      line-height: 0.75em;
+      line-height: 1em;
     }
     #asu_hdr_parent_title span.asu-site-title{
       color: white;

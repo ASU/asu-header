@@ -281,7 +281,6 @@
         var ul = document.createElement('ul');
         var site_name_content;
         if (typeof ASUHeader.site_menu !== "undefined" && typeof ASUHeader.site_menu.site_name !== 'undefined') {
-          console.log('hit');
           site_name_content = '<span>' + ASUHeader.site_menu.site_name + '</span>';
         } else if (typeof ASUHeader.site_title !== 'undefined' && typeof ASUHeader.site_title.title !== 'undefined'){
           if(typeof ASUHeader.site_title.parent_org !== 'undefined'){
