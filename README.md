@@ -85,53 +85,55 @@ In addition to the ASU global navigation menu, the ASU header can consume a site
 The ASU header uses JavaScript to append the local navigation menu items to the mobile menu. The site menu needs to provided as a JSON formatted object:
 
 ```
-ASUHeader.site_menu.json = 
-'[{  
-   "title":"Home",
-   "path":"http://www.asu.edu/absolute_path"
-},
-{  
-   "title":"Degree Programs",
-   "path":"/absolute_path/page",
-   "children":[  
-	  {  
-		 "title":"Admissions",
-		 "path":"/?url=variable",
-		 "children":[  
-			{  
-			   "title":"Student Life",
-			   "path":"/#hash"             
-			}
-		 ]
-	  },
-	  {  
-		 "title":"Ross",
-		 "path":"https://www.asu.edu/"
-	  }
-   ]
-},
-{  
-   "title":"Test",
-   "path":"http://www.asu.edu/",
-   "children":[  
-	  {  
-		 "title":"Beast Layout",
-		 "path":"http://www.asu.edu/"
-	  },
-	  {  
-		 "title":"Landing Page Test",
-		 "path":"http://www.asu.edu/"
-	  },
-	  {  
-		 "title":"Moscone w\/ 100% Banner Title",
-		 "path":"https://www.asu.edu/"
-	  },
-	  {  
-		 "title":"Plain Moscone Layout",
-		 "path":"http://www.asu.edu/layout/this/that/theother"
-	  }
-   ]
-}]';
+ASUHeader.site_menu = 
+{
+    json: '[{  
+             "title":"Home",
+             "path":"http://www.asu.edu/absolute_path"
+          },
+          {  
+             "title":"Degree Programs",
+             "path":"/absolute_path/page",
+             "children":[  
+              {  
+                 "title":"Admissions",
+                 "path":"/?url=variable",
+                 "children":[  
+                    {  
+                       "title":"Student Life",
+                       "path":"/#hash"             
+                    }
+                 ]
+              },
+              {  
+                 "title":"Ross",
+                 "path":"https://www.asu.edu/"
+              }
+             ]
+          },
+          {  
+             "title":"Test",
+             "path":"http://www.asu.edu/",
+             "children":[  
+              {  
+                 "title":"Beast Layout",
+                 "path":"http://www.asu.edu/"
+              },
+              {  
+                 "title":"Landing Page Test",
+                 "path":"http://www.asu.edu/"
+              },
+              {  
+                 "title":"Moscone w\/ 100% Banner Title",
+                 "path":"https://www.asu.edu/"
+              },
+              {  
+                 "title":"Plain Moscone Layout",
+                 "path":"http://www.asu.edu/layout/this/that/theother"
+              }
+             ]
+          }]'
+};
 ```
 
 #### Site title & Parent Organization
