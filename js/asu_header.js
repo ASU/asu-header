@@ -306,7 +306,7 @@
           addLi(ul, 'tlb', '<div class="text"><a target="_top" href="' + ASUHeader.signout_url + '">' + ASUHeaderStr + ' Sign Out</a></div><div id="f-user" class="icn f-user"></div>');
         }
 
-        addLi(ul, 'tlb', '<div class="text"><a>ASU Info</a></div><div class="icn f-sort-down"></div>');
+        addLi(ul, 'tlb', '<div class="text"><a href="#" onClick="return false;">ASU Info</a></div><div class="icn f-sort-down"></div>');
         addLi(ul, 'clb closed', nav);
         /* SITE MENU JSON
          */
@@ -320,7 +320,7 @@
                 if (json[key].path) {
                   addLi(ul, 'tlb', '<div class="text"><a href="' + json[key].path + '">' + json[key].title + '</a></div>' + icon);
                 } else {
-                  addLi(ul, 'tlb', '<div class="text"><a href="#">' + json[key].title + '</a></div>' + icon);
+                  addLi(ul, 'tlb', '<div class="text"><a href="">' + json[key].title + '</a></div>' + icon);
                 }
                 var ul2 = document.createElement('ul');
                 for (var key2 in json[key].children) {
@@ -409,6 +409,52 @@
               hovering[i].classList.remove("asu_head_hover");
             }
           }
+
+            // tab access
+          function isDescendant(parent, child) {
+              var node = child.parentNode;
+              while (node != null) {
+                  if (node == parent) {
+                      return true;
+                  }
+                  node = node.parentNode;
+              }
+              return false;
+          }
+
+          function detectFocus() {
+            var header = document.getElementById('asu_hdr');
+            var mobileMenu = document.getElementById('asu_mobile_menu');
+            var menuClass = mobileMenu.getAttribute("class");
+            var nextSibling = document.activeElement.nextSibling;
+
+            if(isDescendant(header, document.activeElement)){
+                if(menuClass.indexOf("closed") >= 0){
+                    ASUHeader.toggleASU();
+                }
+                else if (nextSibling && nextSibling.classList.contains("f-sort-down")){
+                    nextSibling.onclick.call(nextSibling);
+                }
+                else if(document.activeElement.parentNode.nextSibling && document.activeElement.parentNode.nextSibling.classList.contains("f-sort-down")){
+                    document.activeElement.parentNode.nextSibling.onclick.call(document.activeElement.parentNode.nextSibling);
+                }
+                if(document.activeElement.parentNode.parentNode.parentNode.classList.contains("parent") && document.activeElement.parentNode.parentNode.parentNode.classList.contains("closed")){
+                    document.activeElement.parentNode.parentNode.parentNode.previousSibling.querySelector(".icn2").onclick.call(document.activeElement.parentNode.parentNode.parentNode.previousSibling.querySelector(".icn2"));
+                }
+            } else {
+              if(menuClass.indexOf("opened") >= 0){
+                  closeMenuItems();
+                  ASUHeader.toggleASU();
+              }
+            }
+          }
+
+          function attachEvents() {
+              window.addEventListener ? window.addEventListener('focus', detectFocus, true) : window.attachEvent('onfocusout', detectFocus);
+          }
+          // tab access
+
+          attachEvents();
         })();
         // END Accessibility
 
@@ -750,13 +796,15 @@
 
   function closeTheStuff(a) {
     for (var i = 0, len = a.length; i < len; i++) {
-      var x = a[i].parentNode.nextSibling;
-      if (x != null && x.classList.contains('opened')) {
-        x.classList.remove('opened');
-        x.classList.add('closed');
+      if(a[i] && a[i].parentNode){
+        var x = a[i].parentNode.nextSibling;
+        if (x != null && x.classList.contains('opened')) {
+            x.classList.remove('opened');
+            x.classList.add('closed');
+        }
+        a[i].classList.add('f-sort-down');
+        a[i].classList.remove('f-sort-up');
       }
-      a[i].classList.add('f-sort-down');
-      a[i].classList.remove('f-sort-up');
     }
   }
   /* *****
