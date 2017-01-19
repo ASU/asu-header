@@ -576,7 +576,7 @@
   }
 
   function buildTitle(titleObj, buildParent) {
-    var h1 = document.createElement('h1');
+    var h1 = document.createElement('div');
     h1.className = "header__sitename";
     h1.id = "asu_hdr_title_gen";
     var anchor = document.createElement('a');

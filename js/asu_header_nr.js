@@ -423,7 +423,7 @@
 				}
 
 				function buildTitle(titleObj, buildParent) {
-					var h1 = document.createElement('h1');
+					var h1 = document.createElement('div');
 					h1.className = "header__sitename";
 
 					var anchor = document.createElement('a');
