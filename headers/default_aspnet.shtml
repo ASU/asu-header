@@ -71,6 +71,11 @@
                 Search
             </h2>
             <div id="asu_search_module">
+              <form target="_top" action="https://search.asu.edu/search" id="asu_search_placeholder" method="get" name="gs" role="search">
+                <label for="masu_search_box">Search</label>
+                <input class="asu_search_button" type="submit" value="Search">
+                <input name="q" class="asu_search_box" id="masu_search_box" placeholder="Search" autocomplete="off" type="text">
+              </form>
 			</div>
         </div>
     </div>
