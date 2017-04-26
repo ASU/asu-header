@@ -13,9 +13,9 @@
     </div>
     <div class="closed" id="asu_mobile_menu">
         <div id="asu_nav_wrapper">
-            <h2 class="hidden">
+            <span class="hidden">
                 Sign In / Sign Out
-            </h2>
+            </span>
             <ul id="asu_login_module">
                 <li class="end" id="asu_hdr_ssi">
                     <a href="//weblogin.asu.edu/cgi-bin/login" onclick="this.href=ASUHeader.alterLoginHref(this.href);" onfocus="this.href=ASUHeader.alterLoginHref(this.href);" onmouseover="this.href=ASUHeader.alterLoginHref(this.href);" target="_top">Sign In</a>
