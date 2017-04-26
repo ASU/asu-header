@@ -4,7 +4,7 @@
     <div id="asu_mobile_hdr">
         <div id="asu_logo">
             <a href="//www.asu.edu/" target="_top" title="Arizona State University">
-            <img alt="ASU Logo" title="Arizona State University" src="//www.asu.edu/asuthemes/4.6/assets/full_logo.png"></a>
+            <img alt="ASU Logo" title="Arizona State University" src="//www-dev.asu.edu/asuthemes/4.6/assets/full_logo.png"></a>
         </div>
         <div class="asuhide f-navicon" id="asu_mobile_button" onclick="javascript:ASUHeader.toggleASU();">
             <a href="javascript:ASUHeader.toggleASU();">Menu</a>
@@ -85,7 +85,13 @@
             <h2 class="hidden">
                 Search
             </h2>
-            <div id="asu_search_module"></div>
+            <div id="asu_search_module">
+              <form target="_top" action="https://search.asu.edu/search" id="asu_search_placeholder" method="get" name="gs" role="search">
+                <label for="masu_search_box">Search</label>
+                <input class="asu_search_button" type="submit" value="Search">
+                <input name="q" class="asu_search_box" id="masu_search_box" placeholder="Search" autocomplete="off" type="text">
+              </form>
+            </div>
         </div>
     </div>
 </div>

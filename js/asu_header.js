@@ -690,6 +690,9 @@
 
     form.insertBefore(label, form.firstChild);
     parent.innerHtml = '';
+    if(parent.firstChild && parent.firstChild.id == "asu_search_placeholder"){
+      parent.removeChild(parent.firstChild);
+    }    
     parent.appendChild(form);
     form = '';
   }
