@@ -384,7 +384,9 @@
 
 @media only screen and (max-width :768px) {
     #asu_footer ul li{display:block;margin:5px 0}
-    #asu_logo a img {display:none}
+    #asu_logo a img {
+      content: url(../assets/mobile_logo.png);
+    }
     #asu_logo a {
         background-color:transparent;
         background-position:left top;
@@ -392,11 +394,6 @@
         display:block;
         width:77px;
         height:32px
-    }
-
-    #asu_hdr.asu_hdr_white #asu_logo a{
-        background-size: contain;
-        background-image: url("../assets/mobile_logo.png");
     }
     #innovation-footer .footer-menu ul li{
         clear: left;
