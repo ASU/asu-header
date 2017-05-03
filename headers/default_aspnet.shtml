@@ -4,7 +4,7 @@
     <div id="asu_mobile_hdr">
         <div id="asu_logo">
             <a href="//www.asu.edu/" target="_top" title="Arizona State University">
-            <img alt="ASU Logo" src="//www-dev.asu.edu/asuthemes/4.6/assets/full_logo.png"></a>
+            <img alt="ASU Logo" src="//www.asu.edu/asuthemes/4.6/assets/full_logo.png"></a>
         </div>
         <div class="asuhide f-navicon" id="asu_mobile_button" onclick="javascript:ASUHeader.toggleASU();">
             <a href="javascript:ASUHeader.toggleASU();">Menu</a>
