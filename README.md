@@ -5,7 +5,7 @@ The ASU web standards established a single standard header, which replaces all p
 
 Header versions used in the below instructions may change as official releases are completed.
 
-**Latest build is 4.6**
+**Latest build is 4.7**
 
 ## 
 
@@ -17,23 +17,23 @@ If you're using the header and footer on a non-Drupal site, follow the instructi
 ### HTML (APACHE WITH SSI SUPPORT)
 *Note*: You must have the path /afs/asu.edu/www/asuthemes mounted in Apache as /asuthemes in your document root. For this, the server must be able to access AFS. Sites already in AFS (e.g., www.asu.edu/my-site) and accounts on the legacy ASU Web Hosting Service (i.e., DirectAdmin) already have this access.
 
-**Header: Place above `</head>` tag:** `<!--#include virtual="/asuthemes/4.6/heads/default.shtml"-->`
+**Header: Place above `</head>` tag:** `<!--#include virtual="/asuthemes/4.7/heads/default.shtml"-->`
 
-**Google Tag Manager: Place below `<body>` tag:** `<!--#include virtual="/asuthemes/4.6/includes/gtm.shtml"-->`
+**Google Tag Manager: Place below `<body>` tag:** `<!--#include virtual="/asuthemes/4.7/includes/gtm.shtml"-->`
 
-**Header: Place below Google Tag Manager:** `<!--#include virtual="/asuthemes/4.6/headers/default.shtml"-->`
+**Header: Place below Google Tag Manager:** `<!--#include virtual="/asuthemes/4.7/headers/default.shtml"-->`
 
-**Footer: Above `</body>` tag:** `<!--#include virtual="/asuthemes/4.6/includes/footer.shtml"-->`
+**Footer: Above `</body>` tag:** `<!--#include virtual="/asuthemes/4.7/includes/footer.shtml"-->`
 
 ### PHP
 
-**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/heads/default.shtml'); ?>`
+**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/heads/default.shtml'); ?>`
 
-**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/includes/gtm.shtml'); ?>`
+**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/gtm.shtml'); ?>`
 
-**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/headers/default.shtml'); ?>`
+**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/headers/default.shtml'); ?>`
 
-**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/includes/footer.shtml'); ?>`
+**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/footer.shtml'); ?>`
 
 ## Adding to a Drupal Site
 
@@ -52,13 +52,13 @@ There is no Drupal 6 specific method for adding this version of the ASU header a
 Newer versions of the Web Standard Header & Footer include a file called `legacy.shtml` in the `heads` directory.
 Simply include that file instead of `default.shtml` as in the following example of the PHP implementation.
 
-**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/heads/legacy.shtml'); ?>`
+**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/heads/legacy.shtml'); ?>`
 
-**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/includes/gtm.shtml'); ?>`
+**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/gtm.shtml'); ?>`
 
-**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/headers/default.shtml'); ?>`
+**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/headers/default.shtml'); ?>`
 
-**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.6/includes/footer.shtml'); ?>`
+**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/footer.shtml'); ?>`
 
 ## Configuring the header
 
@@ -108,6 +108,7 @@ ASUHeader.site_menu =
               {  
                  "title":"Ross",
                  "path":"https://www.asu.edu/"
+  }
               }
              ]
           },
@@ -143,7 +144,7 @@ The WSHF can generate a Desktop site title, as well as provide a parent organiza
 Ex.
 
 ```javascript
-ASUHeader.site_title = {title: "Name of Site", parent_org: "Name of Parent Organization"};
+ASUHeader.site_title = {title: "Name of Site", parent_org: "Name of Parent Organization", site_url: "URL of for title link", parent_org_url: "URL of for parent org title link"};
 ```
 
 _\*Obsolete\*_ The site title can be added specifically to the mobile menu system with the following.

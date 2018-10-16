@@ -32,7 +32,7 @@
     display:block;
     overflow:visible!important;
     margin:0;
-    font-size:.8em;
+    font-size:.8rrem;
     font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height:1em;
     color:#000;
@@ -476,7 +476,7 @@
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #333;
   font-weight: 400;
-  font-size: 1.0em;
+  font-size: 1.0rem;
   margin-right: 30px;
   text-decoration: none;
   border-bottom: none;
@@ -532,4 +532,22 @@
 #asu_search_module>form>label {
     position: absolute;
     left: -999999px;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.sr-only:focus {
+  position: static;
+  clip: auto;
+  overflow: visible;
+  width: auto;
+  height: auto;
+  margin: 0;
 }

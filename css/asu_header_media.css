@@ -385,7 +385,7 @@
 @media only screen and (max-width :768px) {
     #asu_footer ul li{display:block;margin:5px 0}
     #asu_logo a img {
-      content: url(../assets/mobile_logo.png);
+      content: url(../assets/mobile_logo.png?v10);
     }
     #asu_logo a {
         background-color:transparent;

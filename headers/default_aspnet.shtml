@@ -1,10 +1,10 @@
-<!-- START /asuthemes/4.6/headers/default_aspnet.shtml -->
+<!-- START /asuthemes/4.7/headers/default_aspnet.shtml -->
 <div id="main-search" class="main-search closed"></div>
 <div id="asu_hdr" class="asu_hdr_white">
     <div id="asu_mobile_hdr">
         <div id="asu_logo">
             <a href="//www.asu.edu/" target="_top" title="Arizona State University">
-            <img alt="ASU Logo" src="//www.asu.edu/asuthemes/4.6/assets/full_logo.png"></a>
+            <img alt="ASU Logo" src="//www.asu.edu/asuthemes/4.7/assets/full_logo.png"></a>
         </div>
         <div class="asuhide f-navicon" id="asu_mobile_button" onclick="javascript:ASUHeader.toggleASU();">
             <a href="javascript:ASUHeader.toggleASU();">Menu</a>
@@ -105,5 +105,5 @@
     //--><!]]>
 </script>
 <div style="clear:both;"></div>
-<!-- END /asuthemes/4.6/headers/default_aspnet.shtml -->
+<!-- END /asuthemes/4.7/headers/default_aspnet.shtml -->
 
