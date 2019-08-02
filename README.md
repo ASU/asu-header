@@ -5,7 +5,7 @@ The ASU web standards established a single standard header, which replaces all p
 
 Header versions used in the below instructions may change as official releases are completed.
 
-**Latest build is 4.7**
+**Latest build is 4.8**
 
 ## 
 
@@ -17,23 +17,23 @@ If you're using the header and footer on a non-Drupal site, follow the instructi
 ### HTML (APACHE WITH SSI SUPPORT)
 *Note*: You must have the path /afs/asu.edu/www/asuthemes mounted in Apache as /asuthemes in your document root. For this, the server must be able to access AFS. Sites already in AFS (e.g., www.asu.edu/my-site) and accounts on the legacy ASU Web Hosting Service (i.e., DirectAdmin) already have this access.
 
-**Header: Place above `</head>` tag:** `<!--#include virtual="/asuthemes/4.7/heads/default.shtml"-->`
+**Header: Place above `</head>` tag:** `<!--#include virtual="/asuthemes/4.8/heads/default.shtml"-->`
 
-**Google Tag Manager: Place below `<body>` tag:** `<!--#include virtual="/asuthemes/4.7/includes/gtm.shtml"-->`
+**Google Tag Manager: Place below `<body>` tag:** `<!--#include virtual="/asuthemes/4.8/includes/gtm.shtml"-->`
 
-**Header: Place below Google Tag Manager:** `<!--#include virtual="/asuthemes/4.7/headers/default.shtml"-->`
+**Header: Place below Google Tag Manager:** `<!--#include virtual="/asuthemes/4.8/headers/default.shtml"-->`
 
-**Footer: Above `</body>` tag:** `<!--#include virtual="/asuthemes/4.7/includes/footer.shtml"-->`
+**Footer: Above `</body>` tag:** `<!--#include virtual="/asuthemes/4.8/includes/footer.shtml"-->`
 
 ### PHP
 
-**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/heads/default.shtml'); ?>`
+**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/heads/default.shtml'); ?>`
 
-**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/gtm.shtml'); ?>`
+**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/includes/gtm.shtml'); ?>`
 
-**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/headers/default.shtml'); ?>`
+**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/headers/default.shtml'); ?>`
 
-**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/footer.shtml'); ?>`
+**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/includes/footer.shtml'); ?>`
 
 ## Adding to a Drupal Site
 
@@ -52,13 +52,13 @@ There is no Drupal 6 specific method for adding this version of the ASU header a
 Newer versions of the Web Standard Header & Footer include a file called `legacy.shtml` in the `heads` directory.
 Simply include that file instead of `default.shtml` as in the following example of the PHP implementation.
 
-**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/heads/legacy.shtml'); ?>`
+**Header: Place above `</head>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/heads/legacy.shtml'); ?>`
 
-**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/gtm.shtml'); ?>`
+**Google Tag Manager: Place below `<body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/includes/gtm.shtml'); ?>`
 
-**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/headers/default.shtml'); ?>`
+**Header: Place below Google Tag Manager:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/headers/default.shtml'); ?>`
 
-**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.7/includes/footer.shtml'); ?>`
+**Footer: Above `</body>` tag:** `<?php echo file_get_contents('http://www.asu.edu/asuthemes/4.8/includes/footer.shtml'); ?>`
 
 ## Configuring the header
 
@@ -175,3 +175,19 @@ There is a configuration option in the ASU Brand Module (version 7.x-1.7 and abo
 
 For Drupal 7 and Webspark sites, change the site title on the Admin > Configuration > System > Site information page ( admin/config/system/site-information ).
 
+#### Cookie consent
+
+Version 4.8 adds a cookieconsent opt-in dialog which explains ASU's use of cookies. When a user opts in, a cookie named 'cookieconsent_status' is set with value 'dismiss'. While this cookie is set (90 day expiry), the dialog will no longer display on subsequent page loads.
+
+To turn off the cookieconsent dialog, set the disableCookieConsent flag to true:
+
+```javascript
+ASUHeader.disableCookieConsent = true;
+```
+
+By default the cookie domain will be set to '.asu.edu' for any host which contains that pattern. To override this pattern for a different domain, the cookieDomain variable can be set:
+
+```javascript
+ASUHeader.cookieDomain = '.otherdomain.com';
+```
+ 
