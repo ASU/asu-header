@@ -21,11 +21,11 @@
 
   /*COOKIE CONSENT*/
   .cc-message {
-    max-width: 60% !important;
+    max-width: 70% !important;
     margin: 0 auto;
   }
   .cc-compliance {
-    max-width: 40%;
+    max-width: 30%;
     margin: 0 auto;
   }
 }
@@ -440,22 +440,19 @@
   h1.header__sitename {
     margin: 0;
   }
-  
-  /** Cookieconsent **/
-  #asu_logo .cc-compliance a {
-    background-color: #8c1d40;
-    background-position: auto;
-    background-repeat: auto;
-    display: inherit;
-    width: auto;
-    height: auto;
+  /*COOKIE CONSENT*/
+  .cc-window.cc-theme-classic.cc-type-info{
+    padding: 10px !important;
+    font-size: 14px;
+    line-height: 1.3;
   }
-
-  .cc-window.cc-theme-classic.cc-type-info {
-    display: block;
+  .cc-window .cc-message{
+    margin-bottom: 10px;
   }
-
-  .cc-compliance {
-    padding-top: 1em;
+  .cc-theme-classic .cc-btn{
+    width: 90%;
+  }
+  .cc-floating.cc-theme-classic{
+    border-radius: 0;
   }
 }

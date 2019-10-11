@@ -777,19 +777,19 @@
   function asuCookieConsent(cookieDomain) {
     var customContent = {
       message:
-        "ASU websites use cookies to enhance user experience, analyze site usage, and assist with outreach and enrollment. By continuing to use this site, you are giving us your consent to do this. Learn more about cookies on ASU websites in our Privacy Statement page.",
+        "ASU websites use cookies to enhance user experience, analyze site usage, and assist with outreach and enrollment. By continuing to use this site, you are giving us your consent to do this. Learn more about cookies on ASU websites in our",
       dismiss: "I agree",
-      link: "Tell me more",
+      link: "Privacy Statement.",
       href: "https://www.asu.edu/privacy#cookies"
     };
 
     var customElements = {
       message:
         '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
-      messagelink:
-        '<span id="cookieconsent:desc" class="cc-message">{{message}}</span>',
+      messagelink: 
+      '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a></span>',
       dismiss:
-        '<a class="asu-cc-btn" href="{{href}}" target="_blank">{{link}}</a><a class="cc-btn cc-dismiss asu-cc-btn" tabindex="0">{{dismiss}}</a>'
+        '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss asu-cc-btn">{{dismiss}}</a>'
     };
 
     // If top level cookie domain not found in hostname, set to empty string (auto)

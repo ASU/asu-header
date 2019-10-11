@@ -604,8 +604,9 @@
 .cc-window.cc-theme-classic.cc-type-info {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
+  font-size: 14px;
   line-height: 1.5;
-  padding: 3em 3em;
+  padding: 1.5em;
   background-color: #5c6670;
   color: #fff;
   width: auto;
@@ -617,6 +618,10 @@
   opacity: 0.92;
 }
 
+.cc-floating.cc-theme-classic{
+  border-radius: 0;
+}
+
 .cc-link {
   color: #fff;
 }
@@ -624,7 +629,7 @@
   color: #ccc;
 }
 
-.cc-theme-classic .asu-cc-btn {
+.cc-theme-classic .cc-btn {
   border: none;
   padding: 0.6em 1.2em;
   background-color: #8c1d40;
@@ -632,24 +637,10 @@
   font-size: 1em;
   font-weight: 500;
   width: 100%;
-  border-radius: 5px;
-  display: block;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
 }
-
-.asu-cc-btn:hover {
+.cc-btn:hover {
   background-color: #d23153;
   color: white;
-}
-
-.cc-banner .asu-cc-btn+.asu-cc-btn {
-  margin-left: .5em;
-}
-
-.cc-floating .asu-cc-btn+.asu-cc-btn {
-  margin-top: .5em;
 }
 
 body .__acs .acsModalBackdrop {
