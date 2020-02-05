@@ -1,16 +1,6 @@
-<!-- START /asuthemes/4.8/heads/default.shtml -->
-<link
-  type="text/css"
-  rel="stylesheet"
-  media="all"
-  href="//www.asu.edu/asuthemes/4.8/css/asu_header.min.css"
-/>
-<link
-  type="text/css"
-  rel="stylesheet"
-  media="all"
-  href="//www.asu.edu/asuthemes/4.8/css/asu_header_media.min.css"
-/>
+<!-- START /asuthemes/4.9/heads/default.shtml TODO: CHANGE URLS BACK AFTER TESTING-->
+<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/4.9/css/asu_header.min.css"/>
+<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/4.9/css/asu_header_media.min.css"/>
 <!--[if IE 9]>
   <style type="text/css">
     #asu_universal_nav ul ul {
@@ -48,11 +38,7 @@
     ASUHeader.browser = true;
   </script><!
 [endif]-->
-<script type="text/javascript" src="//www.asu.edu/asuthemes/4.8/js/asu_header.min.js"></script>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="//www.asu.edu/asuthemes/4.8/vendor/cookieconsent/cookieconsent.min.css"
-/>
-<script src="//www.asu.edu/asuthemes/4.8/vendor/cookieconsent/cookieconsent.min.js"></script>
-<!-- END /asuthemes/4.8/heads/default.shtml -->
+<script type="text/javascript" src="https://www.asu.edu/asuthemes/4.9/js/asu_header.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.asu.edu/asuthemes/4.9/vendor/cookieconsent/cookieconsent.min.css"/>
+<script src="https://www.asu.edu/asuthemes/4.9/vendor/cookieconsent/cookieconsent.min.js"></script>
+<!-- END /asuthemes/4.9/heads/default.shtml -->
